@@ -8,11 +8,19 @@ const port = 6128;
 const app = express();
 app.use(express.json());
 
+// const cors = require('cors');
+// // app.use(cors());
+// app.use(cors({
+//     origin: "http://localhost:4388", // Specify exact origin, not wildcard *
+//     credentials: true // Allow credentials
+// }));
+
 const cors = require('cors');
-// app.use(cors());
+
 app.use(cors({
-    origin: "http://localhost:4388", // Specify exact origin, not wildcard *
-    credentials: true // Allow credentials
+    // מאשרים גם את הפורט הישן וגם את הפורט החדש של Vite
+    origin: ["http://localhost:4388", "http://localhost:5173"], 
+    credentials: true // מאפשר העברת עוגיות ו-Headers מאובטחים
 }));
 
 var bodyParser = require('body-parser');
