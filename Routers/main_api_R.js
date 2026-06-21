@@ -9,10 +9,3 @@ const reports_R = require('./reports_R');
 router.use('/REP', [], reports_R);
 
 module.exports = router;
-
-// const language_R = require('./language_R');
-// router.use('/LG',[],language_R);
-// const level_R = require('./level_R');
-// router.use('/LV',[],level_R);
-// const topics_R = require('./topics_R');
-// router.use('/T',[],topics_R);
